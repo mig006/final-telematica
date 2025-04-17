@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Navega al directorio de la aplicación
+sudo usermod -aG docker ubuntu
 cd ~/app
 
 # Construye la imagen Docker#!/bin/bash
