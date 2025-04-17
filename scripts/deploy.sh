@@ -4,7 +4,6 @@
 cd ~/app
 
 # Construye la imagen Docker#!/bin/bash
-export PATH=/usr/bin:/usr/local/bin:$PATH
 docker build -t final_telematica . || { echo "Docker build failed"; exit 1; }
 
 

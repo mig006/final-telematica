@@ -6,8 +6,9 @@ pipeline {
                 sshagent(['ec2-ssh-key']) {
                     sh '''
                         set -x
+                        export PATH=$PATH:/usr/local/bin:/usr/bin
                         scp -o StrictHostKeyChecking=no scripts/deploy.sh ubuntu@44.211.161.180:~/deploy.sh
-                        ssh -o StrictHostKeyChecking=no ubuntu@44.211.161.180 "chmod +x ~/deploy.sh && ~/deploy.sh"
+                        ssh -o StrictHostKeyChecking=no ubuntu@44.211.161.180
                         echo "Cleaning up old application directory..."
                         # Elimina el directorio existente si existe
                         rm -rf ~/app
