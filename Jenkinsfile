@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Deploy to EC2') {
             steps {
-                sshagent(['jenkins']) {
+                sshagent(['ec2-ssh-key']) {
                     sh '''
                         ssh -o StrictHostKeyChecking=no ubuntu@44.211.161.1808 << 'ENDSSH'
                         # Elimina el directorio existente si existe
