@@ -6,8 +6,8 @@ pipeline {
                 sshagent(['ec2-ssh-key']) {
                     sh '''
                         set -x
-                        scp -o StrictHostKeyChecking=no scripts/deploy.sh ubuntu@100.26.189.229:~/deploy.sh
-                        ssh -o StrictHostKeyChecking=no ubuntu@100.26.189.229 << 'ENDSSH'
+                        scp -o StrictHostKeyChecking=no scripts/deploy.sh ubuntu@18.208.133.202:~/deploy.sh
+                        ssh -o StrictHostKeyChecking=no ubuntu@18.208.133.202 << 'ENDSSH'
                             echo "Cleaning up old application directory..."
                             rm -rf ~/app
                             echo "Cloning the repository..."
