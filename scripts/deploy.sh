@@ -12,4 +12,4 @@ docker build -t final_telematica . || { echo "Docker build failed"; exit 1; }
 docker rm -f final_telematica_container || true
 
 # Ejecuta el contenedor en segundo plano
-docker run -d --name final_telematica_container -p 80:80 final_telematica || { echo "Docker container creation failed"; exit 1; }
+docker run -d --name final_telematica_container -p 3000:3000 final_telematica || { echo "Docker container creation failed"; exit 1; }
