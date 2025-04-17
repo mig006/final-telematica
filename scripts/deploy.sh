@@ -4,6 +4,7 @@
 cd ~/app
 
 # Construye la imagen Docker#!/bin/bash
+whoami
 docker --version || { echo "Docker is not installed"; exit 1; }
 docker build -t final_telematica . || { echo "Docker build failed"; exit 1; }
 
