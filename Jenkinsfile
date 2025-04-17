@@ -5,9 +5,12 @@ pipeline {
             steps {
                 sshagent(['ec2-ssh-key']) {
                     sh '''
+                        set -x
                         ssh -o StrictHostKeyChecking=no ubuntu@44.211.161.180 << 'ENDSSH'
+                        echo "Cleaning up old application directory..."
                         # Elimina el directorio existente si existe
                         rm -rf ~/app
+                        echo "Cloning the repository..."
                         # Clona el repositorio
                         git clone https://github.com/abel8000000/final-telematica.git ~/app
                         # Navega al directorio de scripts
