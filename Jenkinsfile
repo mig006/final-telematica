@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sshagent(['ec2-ssh-key']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no ubuntu@44.211.161.1808 << 'ENDSSH'
+                        ssh -o StrictHostKeyChecking=no ubuntu@44.211.161.180 << 'ENDSSH'
                         # Elimina el directorio existente si existe
                         rm -rf ~/app
                         # Clona el repositorio
