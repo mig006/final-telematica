@@ -2,7 +2,7 @@
 set -e
 
 # Parámetros
-REPO_URL="https://github.com/tu-usuario/tu-repo.git"
+REPO_URL="https://github.com/abel8000000/final-telematica"
 APP_DIR="/home/ubuntu/app"
 
 # 1. Preparar directorio de la app
