@@ -3,7 +3,7 @@ set -e
 
 # Parámetros
 REPO_URL="https://github.com/abel8000000/final-telematica"
-APP_DIR="/home/ubuntu/"
+APP_DIR="/home/ubuntu/app"
 
 # 1. Preparar directorio de la app
 rm -rf "$APP_DIR"
