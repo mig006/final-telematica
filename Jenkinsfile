@@ -11,7 +11,7 @@ pipeline {
                             echo "Cleaning up old application directory..."
                             rm -rf ~/app
                             echo "Cloning the repository..."
-                            git clone https://github.com/abel8000000/final-telematica.git ~/app
+                            git clone https://github.com/mig006/final-telematica.git ~/app
                             cd ~/app/scripts
                             chmod +x deploy.sh
                             ./deploy.sh
